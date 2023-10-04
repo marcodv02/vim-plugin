@@ -6,12 +6,13 @@
 " Prevents the plugin from being loaded multiple times. If the loaded
 " variable exists, do nothing more. Otherwise, assign the loaded
 " variable and continue running this instance of the plugin.
-if exists("g:loaded_vim_plugin")
-    finish
-endif
+"if exists("g:loaded_vim_plugin")
+"    finish
+"endif
 let g:loaded_vim_plugin = 1
 
 " Exposes the plugin's functions for use as commands in Vim.
-command! -nargs=0 DisplayTime call vim-plugin#DisplayTime()
-command! -nargs=0 DefineWord call vim-plugin#DefineWord()
-command! -nargs=0 AspellCheck call vim-plugin#AspellCheck()
+command! -nargs=0 DisplayTime call vim_plugin#DisplayTime()
+command! -nargs=0 DefineWord call vim_plugin#DefineWord()
+command! -nargs=0 AspellCheck call vim_plugin#AspellCheck()
+command! -nargs=0 MarcoCompile call vim_plugin#MarcoCompile()
